@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora UDI2</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Generador de Verificación UDI</h1>
-        <input type="text" id="inputText" placeholder="Ingresa tu texto (ej: HOLA1)" autofocus>
-        <button id="calculateBtn">Calcular</button>
-        <div class="result">
-            <label for="outputText">Resultado:</label>
-            <input type="text" id="outputText" readonly>
-        </div>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="errorMsg" class="error"></p>
     </div>
-    <script src="udi.js"></script>
-    <script src="app.js"></script>
+    <script src="scripts/auth.js"></script>
 </body>
 </html>

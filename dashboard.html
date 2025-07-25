@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Bienvenido, <span id="usernameDisplay"></span>!</h1>
+        <div class="menu">
+            <a href="udi.html" class="btn">Ir a Calculadora UDI</a>
+            <button id="logoutBtn" class="btn">Cerrar Sesión</button>
+        </div>
+    </div>
+    <script src="scripts/auth.js"></script>
+    <script>
+        // Verificar sesión al cargar
+        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        if (!currentUser) {
+            window.location.href = "index.html";
+        } else {
+            document.getElementById('usernameDisplay').textContent = currentUser.username;
+        }
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            sessionStorage.removeItem('currentUser');
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

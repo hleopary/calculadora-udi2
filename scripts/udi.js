@@ -11,5 +11,5 @@ function udi2(cadena) {
         resultado += indice;
     }
 
-    return cadena + diccionario[resultado % 43];
+    return cadena.toUpperCase() + diccionario[resultado % 43];
 }
