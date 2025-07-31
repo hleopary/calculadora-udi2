@@ -1,7 +1,7 @@
 // Usuarios hardcodeados (luego migraremos a localStorage)
 const users = [
     { username: "admin", password: "paryszewski", role: "admin" },
-    { username: "user", password: "1234", role: "user" }
+    //{ username: "user", password: "1234", role: "user" }
     { username: "odontit", password: "1234", role: "user" }
 ];
 
