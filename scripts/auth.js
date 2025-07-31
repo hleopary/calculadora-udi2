@@ -1,7 +1,8 @@
 // Usuarios hardcodeados (luego migraremos a localStorage)
 const users = [
-    { username: "admin", password: "admin", role: "admin" },
+    { username: "admin", password: "paryszewski", role: "admin" },
     { username: "user", password: "1234", role: "user" }
+    { username: "odontit", password: "1234", role: "user" }
 ];
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
